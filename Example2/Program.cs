@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Example1
+namespace Example2
 {
     class Program
     {
@@ -13,11 +13,11 @@ namespace Example1
         {
             DirectoryInfo di = new DirectoryInfo(@"C:\MinGW\include");
 
-            DirectoryInfo[] dirs = di.GetDirectories();
+            FileSystemInfo[] arr = di.GetFileSystemInfos();
 
-            foreach(DirectoryInfo d in dirs)
+            foreach (FileSystemInfo x in arr)
             {
-                Console.WriteLine(d.Name);
+                Console.WriteLine(x.Name);
             }
 
         }
